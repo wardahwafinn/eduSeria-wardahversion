@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Edu Seria — Learning Management System</title>
+  <title>Edu Seria</title>
+  <link rel="icon" type="image/png" href="image/star.png">
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
@@ -21,69 +22,52 @@
       </div>
 
       <div class="window-body">
-        <div class="auth-grid">
-          <div class="auth-panel">
-            <div class="brand">
-              <span class="brand-mark">ES</span>
-              <div>
-                <h1>Edu Seria</h1>
-                <p class="brand-sub">Learning Management System</p>
-              </div>
+        <div class="auth-panel">
+          <div class="brand">
+            <span class="brand-mark">✿</span>
+            <div>
+              <h1>Edu Seria</h1>
+              <p class="brand-sub">Learning Management System</p>
             </div>
-
-            <div class="tabs">
-              <button class="tab active" data-tab="login">Sign in</button>
-              <button class="tab" data-tab="register">Create account</button>
-            </div>
-
-            <!-- Login -->
-            <form id="login-form" class="form">
-              <label>Email
-                <input type="email" name="email" autocomplete="email" required />
-              </label>
-              <label>Password
-                <input type="password" name="password" autocomplete="current-password" required />
-              </label>
-              <button class="btn primary" type="submit">Sign in</button>
-              <div class="hint">
-                <strong>Demo accounts</strong><br />
-                educator@eduseria.com / Educator123!<br />
-                learner@eduseria.com / Learner123!
-              </div>
-            </form>
-
-            <!-- Register -->
-            <form id="register-form" class="form hidden">
-              <label>Full name
-                <input type="text" name="name" required />
-              </label>
-              <label>Email
-                <input type="email" name="email" autocomplete="email" required />
-              </label>
-              <label>Password
-                <input type="password" name="password" autocomplete="new-password" minlength="6" required />
-              </label>
-              <label>I am joining as
-                <select name="role" required>
-                  <option value="learner">Learner</option>
-                  <option value="educator">Educator</option>
-                </select>
-              </label>
-              <button class="btn primary" type="submit">Create account</button>
-            </form>
-
-            <p id="auth-msg" class="msg"></p>
           </div>
 
-          <aside class="auth-aside">
-            <div class="aero-badge">★</div>
-            <h2>Teach and learn,<br />without the server work.</h2>
-            <ul>
-              <li>Educators build and manage courses</li>
-              <li>Learners enrol and track progress</li>
-              <li>Role-based access on every action</li>
-            </ul>
-          </aside>
+          <div class="tabs">
+            <button type="button" class="tab active" data-tab="login">Sign in</button>
+            <button type="button" class="tab" data-tab="register">Create account</button>
+          </div>
+
+          <!-- Login -->
+          <form id="login-form" class="form">
+            <label>Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>Password
+              <input type="password" name="password" autocomplete="current-password" required />
+            </label>
+            <button class="btn primary" type="submit">Sign in</button>
+          </form>
+
+          <!-- Register -->
+          <form id="register-form" class="form hidden">
+            <label>Full name
+              <input type="text" name="name" required />
+            </label>
+            <label>Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>Password
+              <input type="password" name="password" autocomplete="new-password" minlength="6" required />
+            </label>
+            <label>I am joining as
+              <select name="role" required>
+                <option value="learner">Learner</option>
+                <option value="educator">Educator</option>
+              </select>
+            </label>
+            <button class="btn primary" type="submit">Create account</button>
+          </form>
+
+          <p id="auth-msg" class="msg"></p>
         </div>
       </div>
 
