@@ -1,0 +1,21 @@
+{
+  "name": "eduseria-lms",
+  "version": "1.0.0",
+  "description": "Edu Seria LMS prototype - BCN3243 Final Assessment Q2 (Azure App Service + Azure SQL Database)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "setup": "node db/setup.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mssql": "^11.0.1",
+    "oracledb": "^6.10.0"
+  }
+}

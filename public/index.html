@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edu Seria — Learning Management System</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- ===================== AUTH VIEW ===================== -->
+  <main id="auth-view" class="auth">
+    <div class="window auth-window">
+      <div class="titlebar">
+        <span class="titlebar-icon">ES</span>
+        <span class="titlebar-text">Edu Seria — Sign in</span>
+        <span class="titlebar-buttons">
+          <button class="tb-btn" tabindex="-1" aria-hidden="true">_</button>
+          <button class="tb-btn" tabindex="-1" aria-hidden="true">▢</button>
+          <button class="tb-btn close" tabindex="-1" aria-hidden="true">✕</button>
+        </span>
+      </div>
+
+      <div class="window-body">
+        <div class="auth-grid">
+          <div class="auth-panel">
+            <div class="brand">
+              <span class="brand-mark">ES</span>
+              <div>
+                <h1>Edu Seria</h1>
+                <p class="brand-sub">Learning Management System</p>
+              </div>
+            </div>
+
+            <div class="tabs">
+              <button class="tab active" data-tab="login">Sign in</button>
+              <button class="tab" data-tab="register">Create account</button>
+            </div>
+
+            <!-- Login -->
+            <form id="login-form" class="form">
+              <label>Email
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label>Password
+                <input type="password" name="password" autocomplete="current-password" required />
+              </label>
+              <button class="btn primary" type="submit">Sign in</button>
+              <div class="hint">
+                <strong>Demo accounts</strong><br />
+                educator@eduseria.com / Educator123!<br />
+                learner@eduseria.com / Learner123!
+              </div>
+            </form>
+
+            <!-- Register -->
+            <form id="register-form" class="form hidden">
+              <label>Full name
+                <input type="text" name="name" required />
+              </label>
+              <label>Email
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label>Password
+                <input type="password" name="password" autocomplete="new-password" minlength="6" required />
+              </label>
+              <label>I am joining as
+                <select name="role" required>
+                  <option value="learner">Learner</option>
+                  <option value="educator">Educator</option>
+                </select>
+              </label>
+              <button class="btn primary" type="submit">Create account</button>
+            </form>
+
+            <p id="auth-msg" class="msg"></p>
+          </div>
+
+          <aside class="auth-aside">
+            <div class="aero-badge">★</div>
+            <h2>Teach and learn,<br />without the server work.</h2>
+            <ul>
+              <li>Educators build and manage courses</li>
+              <li>Learners enrol and track progress</li>
+              <li>Role-based access on every action</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+
+      <div class="statusbar">
+        <span class="status-cell">Welcome to Edu Seria LMS</span>
+        <span class="status-cell">Secure connection 🔒</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== APP VIEW ===================== -->
+  <div id="app-view" class="app hidden">
+    <div class="window app-window">
+      <div class="titlebar">
+        <span class="titlebar-icon">ES</span>
+        <span class="titlebar-text">Edu Seria LMS</span>
+        <span class="titlebar-buttons">
+          <button class="tb-btn" tabindex="-1" aria-hidden="true">_</button>
+          <button class="tb-btn" tabindex="-1" aria-hidden="true">▢</button>
+          <button class="tb-btn close" tabindex="-1" aria-hidden="true">✕</button>
+        </span>
+      </div>
+
+      <div class="toolbar">
+        <nav id="nav" class="nav"></nav>
+        <div class="user-chip">
+          <span id="user-name"></span>
+          <span id="user-role" class="badge"></span>
+          <button id="logout" class="btn ghost small">Sign out</button>
+        </div>
+      </div>
+
+      <main id="content" class="content"></main>
+
+      <div class="statusbar">
+        <span class="status-cell" id="status-left">Ready</span>
+        <span class="status-cell">Edu Seria LMS · 2007 edition</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
